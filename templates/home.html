@@ -2855,7 +2855,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const select =_item =>{
+            const select = _item => {
                 return document.querySelectorAll(_item)
             }
             // Function to add the active class when element is in view
@@ -2881,15 +2881,16 @@
             revealElements.forEach(element => {
                 observer.observe(element); // Start observing each reveal element
             });
-            select(".message-composer-trigger").forEach(e=>{
-                e.addEventListener("click",function (e) {
+            select(".message-composer-trigger").forEach(e => {
+                e.addEventListener("click", function (e) {
                     e.preventDefault();
                     let el = select(".message-composer")[0];
                     el.style.display = "initial"
-                    setTimeout(_=>el.classList.toggle("show"))
+                    setTimeout(_ => el.classList.toggle("show"))
                 })
-            })
-        });
+            });
+
+        })
 
     </script>
 </div>
